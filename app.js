@@ -1,5 +1,5 @@
 //jshint esversion:6
-require('dotenv').config();
+require(dotenv).config();
 const express = require("express");
 const ejs = require("ejs");
 const mongoose = require("mongoose");
@@ -78,8 +78,8 @@ passport.use(new GoogleStrategy({
 ));
 
 passport.use(new FacebookStrategy({
-  clientID: process.env.FACEBOOK_APP_ID,
-  clientSecret: process.env.FACEBOOK_APP_SECRET,
+  clientID: process.env.FACEBOOK_CLIENT_ID,
+  clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
   callbackURL: "http://localhost:3000/auth/facebook/callback"
 },
   function (accessToken, refreshToken, profile, cb) {
