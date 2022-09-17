@@ -198,11 +198,9 @@ app.post("/login", function (req, res) {
 });
 
 
+const host = '0.0.0.0';
+const port = process.env.PORT || 3000;
 
-
-
-
-
-app.listen(3000, function () {
+app.listen(port, host, function() {
   console.log("Server started on port 3000.");
 });
